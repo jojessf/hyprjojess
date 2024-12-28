@@ -3,4 +3,4 @@ sort=-time
 max-history=5
 background-color=#CC77CCFF
 margin=15,30,10
-default-timeout
+default-timeout=1000
