@@ -7,7 +7,8 @@ use File::Copy qw(copy move);
 my ($opt, @DARG) = Getopt::Lazier->new(@ARGV);
 
 $opt->{host} //= hostname;
-$opt->{bakroot} //= "/nu/inf/hypr/".$opt->{host}."/";
+$opt->{bakroot} //= "/nu/inf/hypr/hyprjojess/".$opt->{host}."/";
+mkdir($opt->{bakroot}) if ! -d $opt->{bakroot};
 $opt->{indir} //= $ENV{HOME};
 $opt->{bakfils} //= "\.conf,\.jsonc,\.css,\.xml";
 $opt->{bakstamp} //= `date +"%Y%m%d%H%M%S"`;
